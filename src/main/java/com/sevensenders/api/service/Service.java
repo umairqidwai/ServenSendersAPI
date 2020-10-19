@@ -18,13 +18,14 @@ public class Service {
 
 	public List<CustomFeed> processedFeed(String PDLUrl, String webComicUrl) {
 		List<CustomFeed> customFeedList = serviceRepository.fetchPDLFeeds(PDLUrl);
-
 		WebcomicXKCD webComicXKCD = serviceRepository.fetchXKCD(webComicUrl).getBody();
 		int year = Integer.valueOf(webComicXKCD.getYear());
 		int month = Integer.valueOf(webComicXKCD.getMonth());
 		int day = Integer.valueOf(webComicXKCD.getDay());
-		String dateString = webComicXKCD.getDay() + "/" + webComicXKCD.getMonth() + "/" + webComicXKCD.getYear();;
-		CustomFeed customFeed = new CustomFeed(webComicXKCD.getImg(), webComicXKCD.getTitle(), webComicUrl, new Date(year-1900, month, day));
+		String dateString = webComicXKCD.getDay() + "/" + webComicXKCD.getMonth() + "/" + webComicXKCD.getYear();
+		;
+		CustomFeed customFeed = new CustomFeed(webComicXKCD.getImg(), webComicXKCD.getTitle(), webComicUrl,
+				new Date(year - 1900, month, day));
 		customFeedList.add(customFeed);
 		Collections.sort(customFeedList);
 		return customFeedList;
