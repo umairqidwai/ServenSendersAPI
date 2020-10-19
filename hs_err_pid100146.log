@@ -1,0 +1,21 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fe53969a231, pid=100146, tid=100163
+#
+# JRE version: OpenJDK Runtime Environment (14.0.2+12) (build 14.0.2+12-46)
+# Java VM: OpenJDK 64-Bit Server VM (14.0.2+12-46, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x4231]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x71
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P %E" (or dumping to /home/umair/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/SevenSendersAPI/core.100146)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:+ShowCodeDetailsInExceptionMessages -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:44827 -javaagent:/home/umair/sts-4.8.0.RELEASE/configuration/org.eclipse.osgi/257/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 com.sevensenders.api.SevenSendersApiApplication
+
+Host: 
