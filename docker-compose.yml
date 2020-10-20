@@ -1,14 +1,15 @@
 version: '2.2'
 services:
-  hola:
+  sevensenders:
     build:
       context: ./
-      dockerfile: Dockerfile
-    image: sevensenderapi
+      dockerfile: DockerFile
+    image: sevensendersapi
     ports:
-      - 8080
+      - 8080:8080
     networks:
       - network1
+    scale: 1
 
 networks:
   network1:
